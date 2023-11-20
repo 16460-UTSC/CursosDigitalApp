@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursosDigitalApp.Seguimiento"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+                <Label Text="Seguimiento de Cursos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Entry Background="White" TextColor="Black" x:Name="txtIdSeg" IsReadOnly="True" IsVisible="False"></Entry>
+            <Picker Background="White" TextColor="Black" x:Name="txtNoemp" IsVisible="false" Title="Numero de Empleado" ItemDisplayBinding="{Binding Noemp}"></Picker>
+   
+            <Picker Background="White" TextColor="Black" Title="Nombre del Empleado" x:Name="txtNombre" ItemDisplayBinding="{Binding Nombre}"></Picker>
+            
+            <Picker Background="White" TextColor="Black" Title="Nombre del Curso" x:Name="txtNombreCurso" ItemDisplayBinding="{Binding NombreCurso}"></Picker>
+            <Entry Background="White" TextColor="Black" Placeholder="Lugar del Curso" x:Name="txtLugarCurso"></Entry>
+            <DatePicker Background="White" TextColor="Black" x:Name="txtFecha"></DatePicker>
+            <TimePicker Background="White" TextColor="Black" x:Name="txtHora"></TimePicker>
+            <Picker Background="White" TextColor="Black" Title="Estatus" x:Name="txtEstatus" SelectedIndexChanged="Picker_SelectedIndexChanged"></Picker>
+            <Entry Background="White" TextColor="Black" Placeholder="Calificacion" x:Name="txtCalificacion"></Entry>
+            <Button  CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Green" Text="Registrar" x:Name="Registrarse" Clicked="Registrarse_Clicked"></Button>
+            <Button  CornerRadius="30" WidthRequest="300" HeightRequest="40" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Blue" Text="Actualizar" x:Name="Actualizar"  Clicked="Actualizar_Clicked" IsVisible="false"></Button>
+    
+            <ListView x:Name="lsSeguimiento" ItemSelected="lsSeguimiento_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding IdSeg}" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding Nombre2}" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding NombreCurso2}" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding LugarCurso}" Grid.Row="0" Grid.Column="3"/>
+                                <Label Text="{Binding Hora}" Grid.Row="0" Grid.Column="4"/>
+                                <Label Text="{Binding Fecha}" Grid.Row="0" Grid.Column="5"/>
+                                <Label Text="{Binding Estatus}" Grid.Row="0" Grid.Column="6"/>
+                                <Label Text="{Binding Calificacion}" Grid.Row="0" Grid.Column="7"/>
+                            </Grid>
+
+
+                        </ViewCell>
+
+
+                    </DataTemplate>
+
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

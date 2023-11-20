@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursosDigitalApp.RegistroAdmin"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+                <Label Text="Registrarse" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Escriba su Nombre"/>
+            <Entry TextColor="Black" Background="White" Placeholder="Nombre" x:Name="txtNombre"></Entry>
+            <Label  Text="Escriba sus Apellidos"/>
+            <Entry TextColor="Black"  Background="White" Placeholder="Apellidos" x:Name="txtApellidos"></Entry>
+            <Label Text="Escribe su Edad"/>
+            <Entry TextColor="Black"  Background="White" Placeholder="Edad" x:Name="txtEdad" Keyboard="Numeric"></Entry>
+            <Label Text="Escribe el CURP"/>
+            <Entry TextColor="Black"  Background="White" Placeholder="CURP" x:Name="txtCURP"></Entry>
+            <Label Text="Escribe su Correo Electronico"/>
+            <Entry TextColor="Black"  Background="White" Placeholder="Email" x:Name="txtEmail"></Entry>
+            <Label Text="Escribe su nueva contraseña"/>
+            <Entry TextColor="Black"  Background="White" Placeholder="Contrasena" x:Name="txtPass" IsPassword="True"></Entry>
+
+            <Button  CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Green" Text="Registrar" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

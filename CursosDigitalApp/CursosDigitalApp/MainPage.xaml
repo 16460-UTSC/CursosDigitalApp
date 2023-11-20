@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursosDigitalApp.MainPage"
+             BackgroundColor="Black">
+
+    <StackLayout>
+        <Frame BackgroundColor="White" Padding="24" CornerRadius="0">
+            <Label Text="CursosDigital" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Image Source="logo.jpg" />
+        <Button CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Green" Text="Registrar Empleados" x:Name="REmpleados" Clicked="REmpleados_Clicked"/>
+        <Button CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Blue" Text="Registrar Cursos" x:Name="RCursos" Clicked="RCursos_Clicked"/>
+        <Button CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Red" Text="Seguimiento de Cursos" x:Name="RSeguimiento" Clicked="RSeguimiento_Clicked"></Button>
+      
+    </StackLayout>
+
+</ContentPage>

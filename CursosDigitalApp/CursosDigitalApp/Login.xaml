@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursosDigitalApp.Login"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Image Source="logo.jpg" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Login" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+
+            
+          
+            <Label TextColor="White" Text="Email"></Label>
+            <Entry Background="White" Placeholder="example@gmail.com" x:Name="txtEmail" Keyboard="Email"/>
+            <Label TextColor="White" Text="Contrasena"/>
+            <Entry Background="White" Placeholder="*****" x:Name="txtPass" IsPassword="True"/>
+            <Button CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Blue" TextColor="White" Text="Login" Clicked="Button_Clicked" />
+            <Button CornerRadius="30" WidthRequest="300"  HeightRequest="40"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Background="Green" TextColor="White" Text="Registrarse" Clicked="Button_Clicked_1" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
