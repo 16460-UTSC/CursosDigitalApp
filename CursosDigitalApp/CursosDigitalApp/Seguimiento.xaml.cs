@@ -23,7 +23,7 @@ namespace CursosDigitalApp
             llenarDatos2();
             llenarDatos();
             llenarDatos3();
-    }
+        }
 
         private void LimpiarControles()
         {
@@ -70,11 +70,11 @@ namespace CursosDigitalApp
         {
             bool respuesta;
 
-           // if (string.IsNullOrEmpty(txtNoemp.SelectedItem.ToString()))
-           // {
-           //     respuesta = false;
-          //  }
-             if (string.IsNullOrEmpty(txtNombre.Items[txtNombre.SelectedIndex]))
+            // if (string.IsNullOrEmpty(txtNoemp.SelectedItem.ToString()))
+            // {
+            //     respuesta = false;
+            //  }
+            if (string.IsNullOrEmpty(txtNombre.Items[txtNombre.SelectedIndex]))
             {
                 respuesta = false;
             }
@@ -86,11 +86,11 @@ namespace CursosDigitalApp
             {
                 respuesta = false;
             }
-           else if (txtFecha.Date == null || txtFecha.Date < DateTime.Today)
+            else if (txtFecha.Date == null || txtFecha.Date < DateTime.Today)
             {
                 respuesta = false;
             }
-           else if (txtHora.Time == null || txtHora.Time < TimeSpan.Zero)
+            else if (txtHora.Time == null || txtHora.Time < TimeSpan.Zero)
             {
                 respuesta = false;
             }
@@ -181,7 +181,7 @@ namespace CursosDigitalApp
 
                 await App.SQLiteDB.SaveSeguimientoAsyc(Segui);
 
-                txtNombre.SelectedItem=Segui.Nombre2;
+                txtNombre.SelectedItem = Segui.Nombre2;
                 txtNombreCurso.SelectedItem = Segui.NombreCurso2;
                 txtLugarCurso.Text = "";
                 txtFecha.Date = DateTime.Now.Date;
@@ -189,9 +189,9 @@ namespace CursosDigitalApp
                 txtEstatus.SelectedItem = "";
                 txtCalificacion.Text = "";
 
-                    await DisplayAlert("ACTUALIZACION", "Se actualizo de Manera Exitosa", "Ok");
+                await DisplayAlert("ACTUALIZACION", "Se actualizo de Manera Exitosa", "Ok");
                 LimpiarControles();
-                    llenarDatos();
+                llenarDatos();
 
                 txtIdSeg.IsVisible = false;
                 Actualizar.IsVisible = false;
@@ -220,14 +220,15 @@ namespace CursosDigitalApp
                     txtNombre.SelectedIndex = txtNombre.Items.IndexOf(segui.Nombre2);
                     txtNombreCurso.SelectedIndex = txtNombreCurso.Items.IndexOf(segui.NombreCurso2);
                     txtLugarCurso.Text = segui.LugarCurso;
-                     txtEstatus.SelectedItem = segui.Estatus;
+                    txtEstatus.SelectedItem = segui.Estatus;
                     txtFecha.Date = segui.Fecha;
                     txtHora.Time = segui.Hora;
-                     txtCalificacion.Text = segui.Calificacion.ToString();
+                    txtCalificacion.Text = segui.Calificacion.ToString();
                 }
             }
         }
 
-    
-          
+
+
+    }
 }
